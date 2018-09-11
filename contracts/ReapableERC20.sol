@@ -10,6 +10,12 @@ contract ReapableERC20 is Ownable {
 
     }
 
+    /**
+    * @dev Admin function
+    * @dev Transfer any kind of ERC20 tokens which are assigned/locked to this smart contract to an address.
+    * @param _contract The ERC20 contract address.
+    * @param _to The address to transfer all locked tokens to.
+    */
     function reapErc20Tokens(address _contract, address _to) public returns (bool) {
         require(msg.sender == owner);
         
